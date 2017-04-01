@@ -1,8 +1,6 @@
 QT += core
 QT -= gui
 
-CONFIG += c++11
-
 TARGET = talib_test
 CONFIG += console
 CONFIG -= app_bundle
