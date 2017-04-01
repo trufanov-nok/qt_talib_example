@@ -1,8 +1,12 @@
 #include <QDebug>
 #include "ta_func.h"
 
-int main(int /*argc*/, char */*argv*/[])
+int main(int /*argc*/, char * /*argv*/[])
 {
+
+    if ( TA_Initialize() != TA_SUCCESS)
+        return -1;
+
     double data[10] = {143.929993, 144.119995, 143.800003, 140.880005, 140.639999, 140.919998, 141.419998, 139.839996, 141.460007, 139.990005};
     const int data_size = sizeof(data) / sizeof(double);
 
@@ -24,7 +28,7 @@ int main(int /*argc*/, char */*argv*/[])
 
     // get TA results
     TA_RetCode res = TA_BBANDS(0, data_size-1, data, 5, 2.0, 2.0, TA_MAType_SMA, &outBegIdx, &outNbElement,
-                                       outRealUpperBand.data(), outRealMiddleBand.data(), outRealLowerBand.data());
+                               outRealUpperBand.data(), outRealMiddleBand.data(), outRealLowerBand.data());
     if (res != TA_SUCCESS) {
         qDebug() << "Error: " << res;
         return -1;
@@ -36,5 +40,5 @@ int main(int /*argc*/, char */*argv*/[])
                            << "outRealLowerBand: " << outRealLowerBand[i];
     }
 
-    return 0;
+    return TA_Shutdown();
 }
