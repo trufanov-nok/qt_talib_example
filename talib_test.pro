@@ -5,6 +5,10 @@ TARGET = talib_test
 CONFIG += console
 CONFIG -= app_bundle
 
+# change lines below to link to original TA-Lib as following
+# INCLUDEPATH += /usr/include/ta-lib/
+# LIBS += -L/usr/lib/ -lta_lib
+
 INCLUDEPATH += /usr/include/ta-lib-rt/
 LIBS += -L/usr/lib/ -lta_lib_rt
 
