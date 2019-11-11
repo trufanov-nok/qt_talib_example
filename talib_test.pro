@@ -5,8 +5,8 @@ TARGET = talib_test
 CONFIG += console
 CONFIG -= app_bundle
 
-INCLUDEPATH += /home/truf/dev/ta-lib/ta-lib/c/include
-LIBS += -L/home/truf/dev/ta-lib/ta-lib/c/lib/ -lta_libc
+INCLUDEPATH += /usr/include/ta-lib-rt/
+LIBS += -L/usr/lib/ -lta_lib_rt
 
 
 TEMPLATE = app
