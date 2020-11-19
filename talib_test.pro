@@ -10,7 +10,7 @@ CONFIG -= app_bundle
 # LIBS += -L/usr/lib/ -lta_lib
 
 INCLUDEPATH += /usr/include/ta-lib-rt/
-LIBS += -L/usr/lib/ -lta_lib_rt
+LIBS += -L/usr/lib/ -lta-lib-rt
 
 
 TEMPLATE = app
